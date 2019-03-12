@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="688.0" prefWidth="682.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gonzalez_salzwedelda.Dot2DotController">
+   <children>
+      <MenuBar prefHeight="19.0" prefWidth="677.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#load" text="Open" />
+                  <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+               </items>
+            </Menu>
+            <Menu fx:id="editMenu" mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#drawLines" text="Lines Only" />
+                  <MenuItem mnemonicParsing="false" onAction="#drawDots" text="Dots Only" />
+                  <MenuItem mnemonicParsing="false" onAction="#drawBoth" text="Lines and Dots" />
+                  <MenuItem fx:id="dotNumbersMenuItem" mnemonicParsing="false" onAction="#toggleDotNumbers" text="Turn on Dot Numbers" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Canvas fx:id="canvas" height="666.0" layoutX="-6.0" layoutY="25.0" width="690.0" />
+      <Label fx:id="numDotsLabel" layoutX="544.0" layoutY="666.0" text="Number of Dots:  0" />
+   </children>
+</AnchorPane>
